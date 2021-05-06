@@ -62,6 +62,8 @@ class Test_new_product(unittest.TestCase):
 
     # 上传新品图片
     def test_11(self):
+        '''上传图片'''
+
         # 获取返回token
         data2 = {"bucket": "test", "envir": "test_tk"}
         a = request.Test_myRequest(PICTURE_URL, 'POST',
@@ -82,6 +84,7 @@ class Test_new_product(unittest.TestCase):
 
     # 保存新品
     def test_12(self):
+        '''保存新品'''
 
         s = ''.join(random.sample(string.ascii_lowercase, 5))
         itemurl = "http://www.ebay.com.qqq1" + s
