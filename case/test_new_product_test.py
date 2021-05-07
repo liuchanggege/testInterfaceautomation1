@@ -259,7 +259,7 @@ class Test_new_product(unittest.TestCase):
 
     # 添加检查
     def test_21(self):
-        
+        '''添加检查'''
         data14 = {"checkStatus": 1, "notes": "审核通过", "parentSkuId": Test_new_product.parentSkuId, "recommendFlag": 0}
 
         a = request.Test_myRequest(os.path.join(URL,"productParentSkuInfo/addCheckInfo"), 'POST',
