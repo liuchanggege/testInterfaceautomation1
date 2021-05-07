@@ -271,7 +271,7 @@ class Test_new_product(unittest.TestCase):
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    suite.addTest(Test_new_product('test_1'))
+    # suite.addTest(Test_new_product('test_1'))
     # suite.addTest(Test_login('test_2'))
     test_dir = './'
     discover = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py')
