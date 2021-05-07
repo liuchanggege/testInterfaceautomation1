@@ -62,7 +62,7 @@ class Test_new_product(unittest.TestCase):
 
     # 上传新品图片
     def test_11(self):
-        '''上传图片'''
+        '''上传新品图片'''
 
         # 获取返回token
         data2 = {"bucket": "test", "envir": "test_tk"}
@@ -84,7 +84,7 @@ class Test_new_product(unittest.TestCase):
 
     # 保存新品
     def test_12(self):
-        '''保存新品'''
+        '''保存新品接口并返回新品id'''
 
         s = ''.join(random.sample(string.ascii_lowercase, 5))
         itemurl = "http://www.ebay.com.qqq1" + s
@@ -107,7 +107,7 @@ class Test_new_product(unittest.TestCase):
         self.assertEqual("200", result['errorCode'])
     # 获取父sku
     def test_13(self):
-
+        '''获取父sku接口'''
         a = request.Test_myRequest(os.path.join(URL,'skuRules/getFatherSku'), 'GET',
                                    headers=Test_new_product.headers)
 
@@ -118,7 +118,7 @@ class Test_new_product(unittest.TestCase):
 
     # 获取子sku
     def test_14(self):
-
+        '''获取子sku接口'''
         data4 = {"parentSku": Test_new_product.FatherSKu, "sku": "", "num": 1}
 
         a = request.Test_myRequest(os.path.join(URL,'skuRules/getSku'), 'POST',
@@ -132,7 +132,7 @@ class Test_new_product(unittest.TestCase):
 
     # 主图上传
     def test_15(self):
-
+        '''上传一个主图'''
         # 获取返回token
         data5 = {"bucket": "test", "envir": "test_tk"}
         a = request.Test_myRequest(PICTURE_URL, 'POST',
@@ -152,7 +152,7 @@ class Test_new_product(unittest.TestCase):
 
     # 添加sku和链接关系
     def test_16(self):
-
+        '''保存供应商链接'''
         data7 = [{"hasDefault": 1, "sku": Test_new_product.sku,
                   "links": "https://detail.1688.com/offer/582177627118.html?spm=a26352.b28411319.offerlist.1.5d871e62VBZakz",
                   "supplierName": "永康市一心硅胶制品厂", "url_supplierName": "永康市一心硅胶制品厂", "supplierId": 17729}]
@@ -161,7 +161,7 @@ class Test_new_product(unittest.TestCase):
                                    json=data7, headers=Test_new_product.headers)
     # 创建商品
     def test_17(self):
-
+        '''创建商品接口'''
         subSku = {"subSku": [
             {"subId": "", "sku": Test_new_product.sku, "colour": "", "weight": 2, "size": "", "cost": 2, "startNum": 1, "inWide": "2",
              "inHigh": "2", "inLong": "2", "outWide": "2", "outHigh": "2", "outLong": "2", "inNetweight": 2, "subUrl": []}]}
@@ -206,8 +206,7 @@ class Test_new_product(unittest.TestCase):
 
     # 添加ProductFileAz
     def test_18(self):
-
-
+        ''''''
         data11 = {"url": [], "parentSku": Test_new_product.FatherSKu, "parentSkuId": Test_new_product.parentSkuId, "list": [
             {"subId": "", "sku": Test_new_product.sku, "colour": "", "storeName": "上海仓", "size": "", "competingGoodsPrice": "",
              "inWide": 2, "inLong": 2, "inHigh": 2, "outLong": 2, "outWide": 2, "outHigh": 2, "airTransFee": "",
