@@ -4,7 +4,6 @@ import unittest
 from BeautifulReport import BeautifulReport
 import os
 import time
-from HTMLTestRunner import HTMLTestRunner
 import logging
 
 BASEPATH = os.path.abspath('./')
