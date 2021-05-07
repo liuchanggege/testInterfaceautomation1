@@ -176,3 +176,4 @@ a=request.Test_myRequest('http://api.longpean.com/productParentSkuInfo/addCheckI
                            data=data14,headers=headers)
 
 print(a.res.json())
+print('1')
