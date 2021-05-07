@@ -9,7 +9,6 @@ from lib import request
 import os
 import random
 import string
-from urllib import parse
 import json
 from lib.config import URL,MOBILE,PASSWORD,PICTURE_URL
 
