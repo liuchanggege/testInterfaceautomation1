@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-'this is a model test api1 (add event)'
+'this is a case about create product'
 _author_ = 'liuchang'
 
 import unittest
