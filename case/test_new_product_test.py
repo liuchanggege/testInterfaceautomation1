@@ -206,7 +206,7 @@ class Test_new_product(unittest.TestCase):
 
     # 添加ProductFileAz
     def test_18(self):
-        ''''''
+        '''保存文件'''
         data11 = {"url": [], "parentSku": Test_new_product.FatherSKu, "parentSkuId": Test_new_product.parentSkuId, "list": [
             {"subId": "", "sku": Test_new_product.sku, "colour": "", "storeName": "上海仓", "size": "", "competingGoodsPrice": "",
              "inWide": 2, "inLong": 2, "inHigh": 2, "outLong": 2, "outWide": 2, "outHigh": 2, "airTransFee": "",
@@ -220,7 +220,7 @@ class Test_new_product(unittest.TestCase):
         #
     # 添加ParentSku
     def test_19(self):
-
+        '''保存商品'''
         subsku1 = {"subSku": [
             {"subId": "", "sku": Test_new_product.sku, "colour": "", "storeName": "上海仓", "weight": 2, "size": "", "cost": 2,
              "startNum": 1, "used": "0", "subUrl": "", "competingGoodsPrice": "", "inWide": 2, "inLong": 2, "inHigh": 2,
@@ -247,7 +247,7 @@ class Test_new_product(unittest.TestCase):
 
     # 普货二审通过
     def test_20(self):
-
+        '''二审通过'''
         data13 = {"spuId": Test_new_product.parentSkuId, "goodAttrs": 7, "storeId": 17}
 
         a = request.Test_myRequest(os.path.join(URL,"productParentSkuInfo/modifyGoodAttrs"), 'POST',
@@ -259,6 +259,7 @@ class Test_new_product(unittest.TestCase):
 
     # 添加检查
     def test_21(self):
+        
         data14 = {"checkStatus": 1, "notes": "审核通过", "parentSkuId": Test_new_product.parentSkuId, "recommendFlag": 0}
 
         a = request.Test_myRequest(os.path.join(URL,"productParentSkuInfo/addCheckInfo"), 'POST',
