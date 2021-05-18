@@ -91,8 +91,9 @@ class Test_new_product(unittest.TestCase):
         Test_new_product.simpleTitle = simpleTitle
 
         data = {"imageUrl": "http://tk.longpean.com/" + Test_new_product.m, "linkUrl": itemurl, "developType": 0, "note": "",
-                "simpleTitle": simpleTitle, "productNature": 0, "station": "", "detargetId": "", "goodStore": 1,
+                "simpleTitle": simpleTitle, "productNature": 0, "station": "us", "detargetId": "", "goodStore": 1,
                 "dulizhanStore": 0, "amazonStore": 0}
+
 
         a = request.Test_myRequest(os.path.join(URL,'tProductNew/saveOrUpdateProductNew'), 'POST',
                                    data=data, headers=Test_new_product.headers)
