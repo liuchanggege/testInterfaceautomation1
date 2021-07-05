@@ -187,4 +187,3 @@ if __name__ == '__main__':
     subsku='"{\\"subSku\\":[{\\"subId\\":\\"\\",\\"sku\\":\\"A2S8U\\",\\"colour\\":\\"\\",\\"weight\\":2,\\"size\\":\\"\\",\\"cost\\":2,\\"startNum\\":1,\\"inWide\\":\\"2\\",\\"inHigh\\":\\"2\\",\\"inLong\\":\\"2\\",\\"outWide\\":\\"2\\",\\"outHigh\\":\\"2\\",\\"outLong\\":\\"2\\",\\"inNetweight\\":2,\\"subUrl\\":[]}]}"'
     c=json.loads(subsku)
     print(c)
-    print(b)
